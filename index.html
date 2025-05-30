@@ -845,9 +845,7 @@
 
 	    
     </style>
-	<script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
+	
 
 </head>
 <body>
@@ -1305,5 +1303,28 @@
             }
         });
     </script>
+
+<script>
+  // More robust right-click prevention
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('Right-click is disabled on this page.');
+    return false;
+  });
+  
+  // Also prevent keyboard shortcuts like F12, Ctrl+U, Ctrl+Shift+I
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || 
+        (e.ctrlKey && e.key === 'u') || 
+        (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+      e.preventDefault();
+      alert('Viewing source is disabled.');
+      return false;
+    }
+  });
+</script>
+
+
+	
 </body>
 </html>
