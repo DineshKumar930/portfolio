@@ -838,6 +838,18 @@
                 font-size: 0.9rem;
             }
         }
+
+        .copyright-link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.3s ease;
+}
+
+.copyright-link:hover {
+  opacity: 0.7;
+}
     </style>
 </head>
 <body>
@@ -1218,7 +1230,18 @@
                 <a href="https://github.com/DineshKumar930" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/dinesh-kumar-503036251/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p class="copyright">© 2025 Dinesh Kumar. All rights reserved.</p>
+            <p className="copyright">
+  © 2025{" "}
+  <a 
+    href="https://dkwebsoft.dineshroy.online" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="copyright-link"
+  >
+    DKWebSoft
+  </a>
+  . All rights reserved.
+</p>
         </div>
     </footer>
 
